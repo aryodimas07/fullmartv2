@@ -20,9 +20,9 @@
             <div class="d-flex justify-content-center">
 
                 <!--card group-->
-                <div class="d-flex align-content-stretch flex-wrap justify-content-center">
+                <div th:each="p: ${all}" class="d-flex align-content-stretch flex-wrap justify-content-center">
                     <div id="kategori_btn" class="btn-group-vertical">
-                        <button onclick="location.href = 'kategori_page.html'" type="button" class="btn btn-light btn-lg">Makanan dan Minuman</button>
+                        <button th:text="${p.nama}" onclick="location.href = 'kategori_page.html'" type="button" class="btn btn-light btn-lg">Makanan dan Minuman</button>
                         <button onclick="location.href = 'kategori_page.html'" type="button" class="btn btn-primary">Lihat Barang</button>
                     </div>
                 </div>
