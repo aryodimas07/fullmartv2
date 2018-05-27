@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head xmlns:th="http://www.thymeleaf.org">
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head th:replace="layout::site-head">
+        <title>Blog</title>
     </head>
+
     <body>
-        <div>TODO write content</div>
+        <nav th:replace="layout::site-nav" class="navbar navbar-expand-lg navbar-light bg-light"/>
+        <!--jumbo tron-->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Shopping Murah di PULMART</h1>
+                <p class="lead">Tempat belanja favorit Anda. Silahkan cek katalog kami!</p>
+            </div>
+        </div>
+        <!--jumbo tron-->
+        <!--container-->
+        <div class="container">
+            <div class="d-flex justify-content-center">
+
+                <!--card group-->
+                <div class="d-flex align-content-stretch flex-wrap justify-content-center">
+                    <div id="kategori_btn" class="btn-group-vertical">
+                        <button onclick="location.href = 'kategori_page.html'" type="button" class="btn btn-light btn-lg">Makanan dan Minuman</button>
+                        <button onclick="location.href = 'kategori_page.html'" type="button" class="btn btn-primary">Lihat Barang</button>
+                    </div>
+                </div>
+                <!--card group-->
+            </div>
+
+            <!--button lihat semua-->
+            <div class="container text-center lihat-semua">
+                <button onclick="location.href = 'all_page.html'" type="button" class="btn btn-primary">Lihat Semua</button>
+            </div>
+            <!--button lihat semua-->
+            <!--footer-->
+            <footer th:replace="layout::site-footer" class="pt-4 my-md-5 pt-md-5 border-top">
+            </footer>
+            <!--footer-->
+        </div>
+        <!--container-->
     </body>
+
 </html>
